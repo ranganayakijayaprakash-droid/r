@@ -1,9 +1,14 @@
+
+              
 <!DOCTYPE html>
 <html lang="en">
-<head
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>AI Smart Inventory System</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -22,6 +27,7 @@
             <form onsubmit="login(event)">
 
                 <label>Email</label>
+
                 <input
                     type="email"
                     id="email"
@@ -30,5 +36,28 @@
                 >
 
                 <label>Password</label>
-  …
-              
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+                <button type="submit">
+                    Login
+                </button>
+
+            </form>
+
+            <p id="message"></p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
