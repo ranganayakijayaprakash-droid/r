@@ -35,4 +35,114 @@
             border-collapse: collapse;
         }
 
-        th…
+        th, td {
+            padding: 14px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background: #2563eb;
+            color: white;
+        }
+
+        .available {
+            color: green;
+            font-weight: bold;
+        }
+
+        .low {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .out {
+            color: red;
+            font-weight: bold;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #2563eb;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="main">
+
+    <a class="back" href="dashboard.html">
+        ← Back to Dashboard
+    </a>
+
+    <h1>📦 Product Management</h1>
+
+    <div class="product-box">
+
+        <table>
+
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>101</td>
+                <td>Laptop</td>
+                <td>Electronics</td>
+                <td>15</td>
+                <td>₹50,000</td>
+                <td class="available">Available</td>
+            </tr>
+
+            <tr>
+                <td>102</td>
+                <td>Mouse</td>
+                <td>Accessories</td>
+                <td>5</td>
+                <td>₹500</td>
+                <td class="low">Low Stock</td>
+            </tr>
+
+            <tr>
+                <td>103</td>
+                <td>Keyboard</td>
+                <td>Accessories</td>
+                <td>20</td>
+                <td>₹1,200</td>
+                <td class="available">Available</td>
+            </tr>
+
+            <tr>
+                <td>104</td>
+                <td>Monitor</td>
+                <td>Electronics</td>
+                <td>0</td>
+                <td>₹12,000</td>
+                <td class="out">Out of Stock</td>
+            </tr>
+
+            <tr>
+                <td>105</td>
+                <td>Printer</td>
+                <td>Electronics</td>
+                <td>8</td>
+                <td>₹8,500</td>
+                <td class="available">Available</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+</html>
