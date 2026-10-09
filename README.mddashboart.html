@@ -34,4 +34,108 @@
         .sidebar a {
             display: block;
             color: white;
-         …
+            text-decoration: none;
+            padding: 15px 5px;
+        }
+
+        .sidebar a:hover {
+            background: #334155;
+        }
+
+        .main {
+            margin-left: 270px;
+            padding: 30px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            color: #64748b;
+        }
+
+        .card h2 {
+            color: #2563eb;
+            font-size: 30px;
+        }
+
+        .ai-box {
+            background: white;
+            margin-top: 30px;
+            padding: 25px;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+
+        <h2>🤖 AI Inventory</h2>
+
+        <a href="dashboard.html">🏠 Dashboard</a>
+        <a href="products.html">📦 Products</a>
+        <a href="sales.html">💰 Sales</a>
+        <a href="reports.html">📊 Reports</a>
+
+    </div>
+
+    <div class="main">
+
+        <h1>Dashboard</h1>
+
+        <p>Welcome to AI Smart Inventory System</p>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Total Products</h3>
+                <h2>120</h2>
+            </div>
+
+            <div class="card">
+                <h3>Total Stock</h3>
+                <h2>850</h2>
+            </div>
+
+            <div class="card">
+                <h3>Low Stock</h3>
+                <h2>12</h2>
+            </div>
+
+            <div class="card">
+                <h3>Total Sales</h3>
+                <h2>₹25,500</h2>
+            </div>
+
+        </div>
+
+        <div class="ai-box">
+
+            <h2>🤖 AI Smart Recommendation</h2>
+
+            <p>5 products may reach low stock soon.</p>
+
+            <p>
+                Recommendation:
+                Consider placing a new stock order.
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>    
