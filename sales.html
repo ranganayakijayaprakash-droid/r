@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sales - AI Smart Inventory</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+        }
+
+        .main {
+            padding: 30px;
+        }
+
+        h1 {
+            color: #1e293b;
+        }
+
+        .sales-box {
+            background: white;
+            padding: 25px;
+            margin-top: 20px;
+            border-radius: 12px;
+        }
+
+        input,
+        select {
+            padding: 12px;
+            margin: 8px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+        }
+
+        button {
+            padding: 12px 20px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 25px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background: #2563eb;
+            color: white;
+        }
+
+        .back {
+            text-decoration: none;
+            color: #2563eb;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+
+        <a class="back" href="dashboard.html">
+            ← Back to Dashboard
+        </a>
+
+        <h1>💰 Sales Management</h1>
+
+        <div class="sales-box">
+
+            <h2>Add New Sale</h2>
+
+            <select id="product">
+                <option value="">Select Product</option>
+                <option value="Laptop">Laptop</option>
+                <option value="Mouse">Mouse</option>
+                <option value="Keyboard">Keyboard</option>
+                <option value="Monitor">Monitor</option>
+                <option value="Printer">Printer</option>
+            </select>
+
+            <input
+                type="number"
+                id="quantity"
+                placeholder="Quantity Sold"
+                min="1"
+            >
+
+            <input
+                type="number"
+                id="price"
+                placeholder="Price"
+                min="0"
+            >
+
+            <button onclick="addSale()">Add Sale</button>
+
+        </div>
+
+        <div class="sales-box">
+
+            <h2>Sales Records</h2>
+
+            <table id="salesTable">
+
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Date</th>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function addSale() {
+
+            const product =
+                document.getElementById("product").value;
+
+            const quantity =
+                Number(document.getElementById("quantity").value);
+
+            const price =
+                Number(document.getElementById("price").value);
+
+            if (product === "" || quantity <= 0 || price <= 0) {
+
+                alert("Please enter all sale details.");
+
+                return;
+            }
+
+            const total = quantity * price;
+
+            const date = new Date().toLocaleDateString();
+
+            const table =
+                document.getElementById("salesTable");
+
+            const row = table.insertRow();
+
+            row.innerHTML = `
+                <td>${product}</td>
+                <td>${quantity}</td>
+                <td>₹${price}</td>
+                <td>₹${total}</td>
+                <td>${date}</td>
+            `;
+
+            alert("Sale Added Successfully!");
+
+            document.getElementById("product").value = "";
+            document.getElementById("quantity").value = "";
+            document.getElementById("price").value = "";
+        }
+
+    </script>
+
+</body>
+
+</html>
